@@ -23,7 +23,7 @@ public class TestaVetorObjetos {
         if (pos > -1) {
             System.out.println("Elemento existe no vetor");
         } else {
-            System.out.println("Elemento n„o existe no vetor");
+            System.out.println("Elemento n√£o existe no vetor");
         }
 
         System.out.println(vetor);

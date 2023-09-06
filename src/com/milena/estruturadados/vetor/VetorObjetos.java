@@ -1,6 +1,7 @@
 package com.milena.estruturadados.vetor;
 
 public class VetorObjetos {
+
     private Object[] elementos;
     private int tamanho;
 
@@ -19,13 +20,13 @@ public class VetorObjetos {
         return false;
     }
 
-    // 0 1 2 3 4 5 6 = tamanho é 5
+    // 0 1 2 3 4 5 6 = tamanho Ã© 5
     // B C E F G + +
     //
     public boolean adiciona(int posicao, Object elemento){
 
         if (!(posicao >= 0 && posicao < tamanho)){
-            throw new IllegalArgumentException("Posição inválida");
+            throw new IllegalArgumentException("PosiÃ§Ã£o invÃ¡lida");
         }
 
         this.aumentaCapacidade();
@@ -52,7 +53,7 @@ public class VetorObjetos {
 
     public Object busca(int posicao){
         if (!(posicao >= 0 && posicao < tamanho)){
-            throw new IllegalArgumentException("Posição inválida");
+            throw new IllegalArgumentException("PosiÃ§Ã£o invÃ¡lida");
         }
         return this.elementos[posicao];
     }
@@ -66,14 +67,14 @@ public class VetorObjetos {
         return -1;
     }
 
-    // B D E F F -> posição a ser removida é 1 (G)
-    // 0 1 2 3 4 -> tamanho é 5
+    // B D E F F -> posiÃ§Ã£o a ser removida Ã© 1 (G)
+    // 0 1 2 3 4 -> tamanho Ã© 5
     // vetor[1] = vetor[2]
     // vetor[2] = vetor[3]
     // vetor[3] = vetor[4]
     public void remove(int posicao){
         if (!(posicao >= 0 && posicao < tamanho)){
-            throw new IllegalArgumentException("Posição inválida");
+            throw new IllegalArgumentException("PosiÃ§Ã£o invÃ¡lida");
         }
         for (int i=posicao; i<this.tamanho-1; i++){
             this.elementos[i] = this.elementos[i+1];

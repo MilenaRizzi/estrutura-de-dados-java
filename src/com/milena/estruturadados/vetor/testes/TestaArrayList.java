@@ -19,14 +19,14 @@ public class TestaArrayList {
         if (existe){
             System.out.println("Elemento existe no array");
         } else {
-            System.out.println("Elemento n„o existe no array");
+            System.out.println("Elemento n√£o existe no array");
         }
 
         int pos = arrayList.indexOf("B");
         if (pos > -1){
             System.out.println("Elemento existe no array na pos " + pos);
         } else {
-            System.out.println("Elemento n„o existe no array " + pos);
+            System.out.println("Elemento n√£o existe no array " + pos);
         }
 
         System.out.println(arrayList.get(2));

@@ -15,7 +15,7 @@ public class TestaVetor2 {
 
         System.out.println(vetor);
 
-        //aula 06, adicionar um elemento em uma posição específica.
+        //aula 06, adicionar um elemento em uma posiÃ§Ã£o especÃ­fica.
         vetor.adiciona(0, "A");
 
         System.out.println(vetor);
@@ -23,7 +23,7 @@ public class TestaVetor2 {
         vetor.adiciona(3, "D");
 
         System.out.println(vetor);
-        //aula 09 - remover um elemento passando o índice
+        //aula 09 - remover um elemento passando o Ã­ndice
         vetor.remove(1);
 
         System.out.println(vetor);
@@ -31,12 +31,12 @@ public class TestaVetor2 {
         System.out.println("Remover o elemento A");
 
         //remover o elemento passando o elemento
-        //usar o método busca juntamente com remove, busca vai retornar o indice para o remove
+        //usar o mÃ©todo busca juntamente com remove, busca vai retornar o indice para o remove
         int pos = vetor.busca("A");
         if (pos > -1) {
             vetor.remove(pos);
         } else {
-            System.out.println("Elemento não existe no vetor");
+            System.out.println("Elemento nï¿½o existe no vetor");
         }
 
         System.out.println(vetor);

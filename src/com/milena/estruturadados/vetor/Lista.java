@@ -7,7 +7,7 @@ public class Lista<T> {
     private int tamanho;
 
     public Lista(int capacidade){
-        this.elementos = (T[]) new Object[capacidade]; //solução do livro effective Java
+        this.elementos = (T[]) new Object[capacidade]; //solu??o do livro effective Java
         this.tamanho = 0;
     }
 
@@ -30,13 +30,13 @@ public class Lista<T> {
         return false;
     }
 
-    // 0 1 2 3 4 5 6 = tamanho é 5
+    // 0 1 2 3 4 5 6 = tamanho ? 5
     // B C E F G + +
     //
     public boolean adiciona(int posicao, T elemento){
 
         if (!(posicao >= 0 && posicao < tamanho)){
-            throw new IllegalArgumentException("Posição inválida");
+            throw new IllegalArgumentException("Posi??o inv?lida");
         }
 
         this.aumentaCapacidade();
@@ -67,7 +67,7 @@ public class Lista<T> {
 
     public T busca(int posicao){
         if (!(posicao >= 0 && posicao < tamanho)){
-            throw new IllegalArgumentException("Posição inválida");
+            throw new IllegalArgumentException("Posi??o inv?lida");
         }
         return this.elementos[posicao];
     }
@@ -103,14 +103,14 @@ public class Lista<T> {
         return busca(elemento) > -1; //>=0
     }
 
-    // B D E F F -> posição a ser removida é 1 (G)
-    // 0 1 2 3 4 -> tamanho é 5
+    // B D E F F -> posi??o a ser removida ? 1 (G)
+    // 0 1 2 3 4 -> tamanho ? 5
     // vetor[1] = vetor[2]
     // vetor[2] = vetor[3]
     // vetor[3] = vetor[4]
     public void remove(int posicao){
         if (!(posicao >= 0 && posicao < tamanho)){
-            throw new IllegalArgumentException("Posição inválida");
+            throw new IllegalArgumentException("Posi??o inv?lida");
         }
         for (int i=posicao; i<this.tamanho-1; i++){
             this.elementos[i] = this.elementos[i+1];
@@ -126,13 +126,13 @@ public class Lista<T> {
     }
 
     public void limpar(){
-        //opção 1
+        //op??o 1
         //this.elementos = (T[]) new Object[this.elementos.length];
 
-        //opção 2
+        //op??o 2
         //this.tamanho = 0;
 
-        //opção 3
+        //op??o 3
         for (int i=0; i<this.tamanho; i++){
             this.elementos[i] = null;
         }
