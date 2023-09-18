@@ -321,3 +321,29 @@ public class Exer06 {
         }
     }
 }
+/*
+* public class Palindromo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String palavra = scan.nextLine();
+        scan.close();
+        System.out.println(isPalindrome(palavra));
+    }
+
+    public static boolean isPalindrome(String palavra) {
+        Stack<Character> pilha = new Stack<>();
+        for(int i = 0; i < palavra.length(); i++){
+            pilha.push(palavra.charAt(i));
+        }
+        String palavraInversa = "";
+
+        while (!pilha.isEmpty()) {
+            palavraInversa += pilha.pop();
+        }
+
+        if (palavra.equalsIgnoreCase(palavraInversa)){
+            return true;
+        }
+       return false;
+    }
+}*/
