@@ -17,6 +17,7 @@ public class EstruturaEstatica<T> {
         return this.tamanho == 0;
     }
 
+    //adiciona no final
     protected boolean adiciona(T elemento) {
         this.aumentaCapacidade();
         if (this.tamanho < this.elementos.length){
@@ -28,9 +29,10 @@ public class EstruturaEstatica<T> {
     }
 
     //protected para que só as classes que pertecem ao pacote base e as suas filhas é que poderão ver esse método
+    //adiciona em uma determinada posicao
     protected boolean adiciona(int posicao, T elemento){
 
-        if (!(posicao >= 0 && posicao < tamanho)){
+        if ((posicao < 0 || posicao > tamanho)){
             throw new IllegalArgumentException("Posição inválida");
         }
 
@@ -44,6 +46,16 @@ public class EstruturaEstatica<T> {
         this.tamanho++;
 
         return true;
+    }
+
+    protected void remove(int posicao){
+        if (!(posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posicao inválida");
+        }
+        for (int i=posicao; i<tamanho-1; i++){
+            elementos[i] = elementos[i+1];
+        }
+        tamanho--;
     }
 
     private void aumentaCapacidade(){
